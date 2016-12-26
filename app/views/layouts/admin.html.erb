@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Administration</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <%= render partial: "menu/menu_partials" %>
+
+    <div class="container-fluid" id="main">
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+  </body>
+
+</html>
