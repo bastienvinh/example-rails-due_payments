@@ -1,24 +1,46 @@
-# README
+# DuePayments
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/due_payments`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-Things you may want to cover:
+TODO: Delete this and the text above, and describe your gem
 
-* Ruby version
+## Installation
 
-* System dependencies
+Add this line to your application's Gemfile:
 
-* Configuration
+```ruby
+gem 'due_payments'
+```
 
-* Database creation
+And then execute:
 
-* Database initialization
+    $ bundle install
+    $ duepgem configure
+    $ rails db:migrate
+    $ rails db:seed
 
-* How to run the test suite
+Or install it yourself as:
 
-* Services (job queues, cache servers, search engines, etc.)
+    $ gem install due_payments
 
-* Deployment instructions
+## Usage
 
-* ...
+
+Launch this command :
+
+    $ rails server
+
+Test Url : http://localhost:3000/landlords
+
+## Development
+
+This is far from finished yet
+
+## Contributing
+
+- Bastien VINH
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
