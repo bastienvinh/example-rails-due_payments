@@ -11,12 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery-ujs
 //= require turbolinks
 //= require tether
-
-
-
+//= require bootstrap
 
 $(function() {
 
@@ -25,5 +22,8 @@ $(function() {
   $('[data-toggle=offcanvas]').click(function() {
     $('.row-offcanvas').toggleClass('active');
   });
+
+  // All alert will be dismiss automatically
+  $('.alert').alert()
   
 });

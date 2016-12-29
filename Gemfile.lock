@@ -101,6 +101,8 @@ GEM
     rails-assets-jquery (3.1.1)
     rails-assets-jquery-ujs (1.2.2)
       rails-assets-jquery (> 1.8)
+    rails-assets-parsleyjs (2.6.0)
+      rails-assets-jquery (> 1.8)
     rails-assets-tether (1.4.0)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
@@ -171,6 +173,7 @@ DEPENDENCIES
   rails-assets-ionicons!
   rails-assets-jquery!
   rails-assets-jquery-ujs!
+  rails-assets-parsleyjs!
   rails-assets-tether (>= 1.1.0)!
   sass-rails (~> 5.0)!
   spring!

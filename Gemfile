@@ -57,6 +57,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
   gem 'rails-assets-bootstrap', '4.0.0.alpha.5'
   gem 'rails-assets-ionicons'
+  gem 'rails-assets-parsleyjs'
 end
 
 

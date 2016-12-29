@@ -1,6 +1,6 @@
 <div class="col-md-3 col-lg-2 sidebar-offcanvas">
   <ul class="nav nav-pills nav-stacked">
-      <li class="nav-item"><a class="nav-link" href="#">Lists</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Add new Landlord</a></li>
+      <li class="nav-item"><%= link_to('Lists', landlords_path, class: 'nav-link') %></li>
+      <li class="nav-item"><%= link_to('Register Landlord', new_landlord_path, class: 'nav-link') %></li>
   </ul>
 </div>

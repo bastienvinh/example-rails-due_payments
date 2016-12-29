@@ -9,14 +9,16 @@
     <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-
-    <%= render partial: "menu/menu_partials" %>
+    <%= render partial: 'menu/menu_partials' %>
 
     <div class="container-fluid" id="main">
+      <%= render partial: 'layouts/notification' %>
       <%= yield %>
     </div>
 
-    <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin', 'data-turbolinks-track': false, 'data-turbolinks-eval': false %>
+    <%= yield :javascript_includes %>
+
   </body>
 
 </html>
