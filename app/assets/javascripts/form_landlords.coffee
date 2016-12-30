@@ -16,4 +16,6 @@ $ ->
         .removeClass 'has-danger'
       $('div.form-control-feedback').hide()
       $('.form-control').removeClass 'form-control-danger'
-  console.log 'loaded ...'
+  # Tips to make dure to not call the submit button before javascript loaded
+  $('#form_landlord').find('input:submit').attr('disabled', false)
+  console.log 'javascript loaded ...'
