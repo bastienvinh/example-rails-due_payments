@@ -8,66 +8,8 @@
 
   <div class="col-md-5">
     <%= form_tag(landlords_path, method: 'post', id: 'form_landlord', 'data-parsley-validate': true) do %>
-      
-      <div class="form-group">
-        <%= label_tag('[landlord][firstname]', 'Firstname') %>
-        <%= text_field_tag(
-            '[landlord][firstname]', nil, 
-            placeholder: 'Enter your firstname here', class: 'form-control',
-            'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true,
-            'data-parsley-minlength': 5
-        ) %>
-        <div style="display:none;" class="form-control-feedback">Required / Min 5 chars</div>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag('[landlord][lastname]', 'Lastname') %>
-        <%= text_field_tag(
-            '[landlord][lastname]', nil, 
-            placeholder: 'Enter your lastname here', class: 'form-control',
-            'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true,
-            'data-parsley-minlength': 6
-        ) %>
-        <div style="display:none;" class="form-control-feedback">Required / Min 5 chars</div>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag('[landlord][address]', 'Address') %>
-        <%= text_field_tag(
-          '[landlord][address]', nil, placeholder: 'Your full address here ...',
-          class: 'form-control', 'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true,
-          'data-parsley-minlength': 6
-          ) %>
-        <div style="display:none;" class="form-control-feedback">Required / Min 6 chars</div>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag('[landlord][zip_code]', 'Postal Code') %>
-        <%= text_field_tag('[landlord][zip_code]', nil, placeholder: 'CB1 THY', class: 'form-control' ) %>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag('[landlord][phone_number]', 'Phone Number') %>
-        <%= text_field_tag('[landlord][phone_number]', nil, placeholder: '+00 928382003993', class: 'form-control' ) %>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag('[landlord][email]', 'Email') %>
-        <%= email_field_tag(
-            '[landlord][email]', nil, placeholder: 'email@domain.com', class: 'form-control',
-            'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true
-          ) %>
-        <div style="display:none;" class="form-control-feedback">Required</div>
-      </div>
-
-      <div class="form-check">
-        <%= label_tag('[landlord][enable]', 'Phone Number', class: 'form-check-label') do %>
-          <%= check_box_tag('[landlord][enable]', 'enable', false, class: 'form-check-input') %> Active
-        <% end %>
-      </div>
-
+      <%= render(partial: 'form', locals: { firstname: '', lastname: '', address: '', zip_code: '', phone_number: '', email: '', enable: false }) %>
       <%= submit_tag("Submit", class: 'btn btn-primary', disabled: true) %>
-
     <% end %>
   </div>
 
