@@ -1,7 +1,7 @@
 <div class="form-group">
   <%= label_tag('[landlord][firstname]', 'Firstname') %>
   <%= text_field_tag(
-      '[landlord][firstname]', @firstname, 
+      '[landlord][firstname]', firstname, 
       placeholder: 'Enter your firstname here', class: 'form-control',
       'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true,
       'data-parsley-minlength': 5
@@ -12,7 +12,7 @@
 <div class="form-group">
   <%= label_tag('[landlord][lastname]', 'Lastname') %>
   <%= text_field_tag(
-      '[landlord][lastname]', @lastname, 
+      '[landlord][lastname]', lastname, 
       placeholder: 'Enter your lastname here', class: 'form-control',
       'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true,
       'data-parsley-minlength': 6
@@ -23,7 +23,7 @@
 <div class="form-group">
   <%= label_tag('[landlord][address]', 'Address') %>
   <%= text_field_tag(
-    '[landlord][address]', @address, placeholder: 'Your full address here ...',
+    '[landlord][address]', address, placeholder: 'Your full address here ...',
     class: 'form-control', 'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true,
     'data-parsley-minlength': 6
     ) %>
@@ -32,18 +32,18 @@
 
 <div class="form-group">
   <%= label_tag('[landlord][zip_code]', 'Postal Code') %>
-  <%= text_field_tag('[landlord][zip_code]', @zip_code, placeholder: 'CB1 THY', class: 'form-control' ) %>
+  <%= text_field_tag('[landlord][zip_code]', zip_code, placeholder: 'CB1 THY', class: 'form-control' ) %>
 </div>
 
 <div class="form-group">
   <%= label_tag('[landlord][phone_number]', 'Phone Number') %>
-  <%= text_field_tag('[landlord][phone_number]', @phone_number, placeholder: '+00 928382003993', class: 'form-control' ) %>
+  <%= text_field_tag('[landlord][phone_number]', phone_number, placeholder: '+00 928382003993', class: 'form-control' ) %>
 </div>
 
 <div class="form-group">
   <%= label_tag('[landlord][email]', 'Email') %>
   <%= email_field_tag(
-      '[landlord][email]', @email, placeholder: 'email@domain.com', class: 'form-control',
+      '[landlord][email]', email, placeholder: 'email@domain.com', class: 'form-control',
       'data-parsley-required': true, 'data-parsley-errors-messages-disabled': true
     ) %>
   <div style="display:none;" class="form-control-feedback">Required</div>
@@ -51,6 +51,6 @@
 
 <div class="form-check">
   <%= label_tag('[landlord][enable]', 'Phone Number', class: 'form-check-label') do %>
-    <%= check_box_tag('[landlord][enable]', 'enable', @enable, class: 'form-check-input') %> Active
+    <%= check_box_tag('[landlord][enable]', 'enable', enable, class: 'form-check-input') %> Active
   <% end %>
 </div>

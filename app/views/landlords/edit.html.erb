@@ -7,8 +7,16 @@
   <div class="some-space hidden-md-up"></div>
 
   <div class="col-md-5">
-    <%= form_tag(landlords_path, method: 'post', id: 'form_landlord', 'data-parsley-validate': true) do %>
-      <%= render(partial: 'form', locals: { firstname: '', lastname: '', address: '', zip_code: '', phone_number: '', email: '', enable: false }) %>
+    <%= form_tag(landlord_path(@landlord.id), method: 'put', id: 'form_landlord', 'data-parsley-validate': true) do %>
+      <%= render(partial: 'form', locals: {
+        firstname: @landlord.firstname,
+        lastname: @landlord.lastname,
+        address: @landlord.address,
+        zip_code: @landlord.zip_code,
+        phone_number: @landlord.phone_number, 
+        email: @landlord.email,
+        enable: @landlord.enable
+        }) %>
       <%= submit_tag("Submit", class: 'btn btn-primary', disabled: true) %>
     <% end %>
   </div>
