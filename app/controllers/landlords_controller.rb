@@ -4,6 +4,10 @@ require 'pp'
 class LandlordsController < ApplicationController
   layout 'admin'
 
+  # rescue_from ActiveRecord::RecordNotFound, with: :not_found_landlord
+  rescue_from DuePayments::LandlordNotFoundException, with: :not_found_landlord
+
+
   def index
     # @tests = DuePayments::Landlord.all
     @landlords = DuePayments::Landlord.all
@@ -11,7 +15,10 @@ class LandlordsController < ApplicationController
 
   def show; end
 
-  def edit; end
+  def edit
+    @landlord = DuePayments::Landlord.find(params[:id].to_i)
+    pp @landlord
+  end
 
   def new; end
 
@@ -38,7 +45,7 @@ class LandlordsController < ApplicationController
 
   def destroy
     # TODO : You can't delete a line because we can remove all transactions
-    redirect_to '/landlords'
+    redirect_to landlords_path
   end
 
   private
@@ -48,6 +55,13 @@ class LandlordsController < ApplicationController
       'zip_code', 'email', 'phone_number',
       'address', 'enable'
     )
+  end
+
+  def not_found_landlord
+    id = params[:id]
+    flash[:error_server] = "Can't find user "
+    flash[:error_server] << (id ? "with id : #{id}" : ' ...')
+    redirect_to landlords_path
   end
 
 end

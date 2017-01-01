@@ -1,0 +1,21 @@
+<%= render :partial => 'sub_menu' %>
+
+<div class="col-md-9 col-lg-10">
+
+  <h2>Modify a landlord</h2>
+
+  <div class="some-space hidden-md-up"></div>
+
+  <div class="col-md-5">
+    <%= form_tag(landlords_path, method: 'post', id: 'form_landlord', 'data-parsley-validate': true) do %>
+      <%= render(partial: 'form', locals: { firstname: '', lastname: '', address: '', zip_code: '', phone_number: '', email: '', enable: false }) %>
+      <%= submit_tag("Submit", class: 'btn btn-primary', disabled: true) %>
+    <% end %>
+  </div>
+
+</div>
+
+
+<% content_for :javascript_includes do %>
+    <%= javascript_include_tag 'form_landlords', 'data-turbolinks-track': false, 'data-turbolinks-eval': false %>
+<% end %>
