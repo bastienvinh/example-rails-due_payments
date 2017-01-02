@@ -1,7 +1,7 @@
 #= require parsleyjs
 'use strict'
 
-$ -> 
+$ ->
   $('#form_landlord').parsley()
     .on 'form:error', -> 
       $.each this.fields, (key, field) ->
@@ -16,6 +16,10 @@ $ ->
         .removeClass 'has-danger'
       $('div.form-control-feedback').hide()
       $('.form-control').removeClass 'form-control-danger'
-  # Tips to make dure to not call the submit button before javascript loaded
-  $('#form_landlord').find('input:submit').attr('disabled', false)
-  console.log 'javascript loaded ...'
+  $('#form_landlord').find('input:submit').attr('disabled', false);
+  console.log 'Javascript has been loaded ...'
+  
+
+
+
+

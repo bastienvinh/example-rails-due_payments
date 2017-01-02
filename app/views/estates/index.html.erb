@@ -19,7 +19,7 @@
             <td><%= estate.acre %></td>
             <td><%= estate.zip_code %></td>
             <td><%= estate.address %></td>
-            <td><%= number_to_currency(estate.total_price, unit: '£', delimiter: ' ', separator: ', ', format: "%n %u") %></td>
+            <td><%= number_to_currency(estate.total_price, unit: '£', delimiter: ' ', separator: ', ', format: '%n %u') %></td>
             <td>
               <a href="#" class="btn btn-link"><span class="ion-edit size-16"></span></a>
               <%= button_to "lala", :class => 'btn btn-link', :style => 'display: inline-block;', :method => 'delete' do %>

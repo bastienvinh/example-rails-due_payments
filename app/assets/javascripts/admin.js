@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
+//= require jquery-ujs
 //= require turbolinks
 //= require tether
 //= require bootstrap
@@ -25,5 +27,4 @@ $(function() {
 
   // All alert will be dismiss automatically
   $('.alert').alert()
-  
 });

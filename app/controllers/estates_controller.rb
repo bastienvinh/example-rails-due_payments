@@ -7,6 +7,7 @@ class EstatesController < ApplicationController
   before_action :init_data
 
   def index
+    # TODO : change to get only estates active
     @estates = DuePayments::Estate.all
   end
 
