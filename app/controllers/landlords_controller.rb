@@ -1,5 +1,4 @@
 require 'due_payments/landlord'
-require 'pp'
 
 class LandlordsController < ApplicationController
   layout 'admin'
