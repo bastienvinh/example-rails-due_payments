@@ -5,19 +5,18 @@
   <a class="navbar-brand" href="#">DUE PAYMENTS</a>
   <div class="collapse navbar-toggleable-xs" id="collapsingNavbar">
       <ul class="nav navbar-nav pull-right">
+          <%= content_tag(:li, class: 'nav-item') do %>
+            <a class="nav-link" href="#">DASHBOARD <span class="sr-only"></span></a>
+          <% end %>
+          <%= content_tag(:li, class: "nav-item #{(@current_page == 'estates' ? 'active' : '' )}") do %>
+            <%= link_to('ESTATES', estates_path, class: 'nav-link') %>
+          <% end %>
+          <%= content_tag(:li, class: "nav-item #{(@current_page == 'landlords' ? 'active' : '' )}") do %>
+            <%= link_to('LANDLORDS', landlords_path, class: 'nav-link') %>
+          <% end %>
           <li class="nav-item">
-              <a class="nav-link" href="#">Home <span class="sr-only">Home</span></a>
+              <a class="nav-link" href="#estates">PAYMENTS</a>
           </li>
-          <li class="nav-item active">
-              <%= link_to('Estates', estates_path, class: 'nav-link') %>
-          </li>
-          <li class="nav-item">
-              <%= link_to('Landlords', landlords_path, class: 'nav-link') %>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#estates">Payments</a>
-          </li>
-          
       </ul>
   </div>
 </nav>

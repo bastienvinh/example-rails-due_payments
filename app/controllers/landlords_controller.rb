@@ -1,10 +1,12 @@
 require 'due_payments/landlord'
 
 class LandlordsController < ApplicationController
+
   layout 'admin'
 
   # rescue_from ActiveRecord::RecordNotFound, with: :not_found_landlord
   rescue_from DuePayments::LandlordNotFoundException, with: :not_found_landlord
+  before_action :init_data
 
 
   def index
@@ -85,6 +87,10 @@ class LandlordsController < ApplicationController
     flash[:error_server] = "Can't find user "
     flash[:error_server] << (id ? "with id : #{id}" : ' ...')
     redirect_to landlords_path
+  end
+
+  def init_data
+    @current_page = 'landlords'
   end
 
 end
